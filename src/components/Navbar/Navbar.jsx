@@ -8,11 +8,12 @@ import {
   Menu,
   Typography,
 } from "@material-ui/core";
+import { Link } from "react-router-dom";
 import { ShoppingCart } from "@material-ui/icons";
 import logo from "../../assets/logo.png";
 import useStyles from "./styles";
 
-const Navbar = () => {
+const Navbar = ({ totalItems }) => {
   const classes = useStyles();
   return (
     <>
@@ -30,7 +31,7 @@ const Navbar = () => {
           <div className={classes.grow} />
           <div className={classes.button}>
             <IconButton aria-label="Show card items" color="inherit">
-              <Badge badgeContent={2} color="secondary">
+              <Badge badgeContent={totalItems} color="secondary">
                 <ShoppingCart />
               </Badge>
             </IconButton>
