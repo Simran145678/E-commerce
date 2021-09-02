@@ -3,25 +3,7 @@ import { Grid } from "@material-ui/core";
 import Product from "./Product/Product";
 import useStyles from "./styles";
 
-const products = [
-  {
-    id: 1,
-    name: "lipstic",
-    description: "Rose red in matt",
-    price: "$35",
-    image:
-      "https://www.maccosmetics.ca/media/export/cms/products/640x600/mac_sku_M2LP05_640x600_0_vto.jpg",
-  },
-  {
-    id: 2,
-    name: "mascara",
-    description: "perfect lash lift",
-    price: "$30",
-    image:
-      "https://www.sephora.com/productimages/sku/s2294312-main-zoom.jpg?imwidth=315",
-  },
-];
-const Products = () => {
+const Products = ({ products, onAddToCart }) => {
   const classes = useStyles();
   return (
     <main className={classes.content}>
